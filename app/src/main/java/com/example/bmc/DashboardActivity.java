@@ -1,52 +1,43 @@
 package com.example.bmc;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 
-import com.example.bmc.adapter.InfoAdapter;
-import com.example.bmc.model.InfoModel;
-
-import java.util.ArrayList;
-
-import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator;
+import com.example.bmc.Fragment.DashboardFragment;
+import com.example.bmc.Fragment.ProfileFragment;
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class DashboardActivity extends AppCompatActivity {
 
-    private RecyclerView rv_info;
-    private InfoAdapter infoAdapter;
-    private ArrayList<InfoModel> infoModels = new ArrayList<>();
-    private InfoModel infoModel;
-
-    //dotsindicator
-    private ScrollingPagerIndicator indicator ;
+    private ChipNavigationBar chipNavigationBar;
+    private Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        indicator = findViewById(R.id.indicator);
-        rv_info = findViewById(R.id.rv_info);
-        rv_info.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        rv_info.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
-        setRv_info();
-        indicator.attachToRecyclerView(rv_info);
 
+        chipNavigationBar = findViewById(R.id.chipNavBar);
+        chipNavigationBar.setItemSelected(R.id.dashboard,true);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new DashboardFragment()).commit();
+
+        chipNavigationBar.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int i) {
+
+                if(i == R.id.dashboard)
+                    fragment = new DashboardFragment();
+                else if(i == R.id.profile)
+                    fragment = new ProfileFragment();
+
+                if(fragment!=null){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+                }
+            }
+        });
     }
 
-
-    private void setRv_info(){
-        for(int i = 0; i<5;i++){
-            infoModel = new InfoModel();
-            infoModel.setId_info(String.valueOf(i));
-            infoModel.setJdl_info("Judul : "+i);
-            infoModels.add(infoModel);
-        }
-
-        infoAdapter = new InfoAdapter(this,infoModels);
-        rv_info.setAdapter(infoAdapter);
-    }
 }

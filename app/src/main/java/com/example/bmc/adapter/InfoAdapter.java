@@ -12,9 +12,9 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.bmc.R;
 import com.example.bmc.model.InfoModel;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -41,7 +41,7 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.ViewHolder> {
 
         void bind(final InfoModel infoModel){
             tv_judul.setText(infoModel.getJdl_info());
-            Picasso.get().load(R.drawable.info_exam).into(img_info);
+            Glide.with(context).load(R.drawable.info_exam).into(img_info);
             btn_lihat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

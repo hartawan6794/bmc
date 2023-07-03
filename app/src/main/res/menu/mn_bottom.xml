@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="#fff">
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/primary"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/primary" /> <item
+        android:id="@+id/sop"
+        android:icon="@drawable/icon_sop"
+        android:title="SOP"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/primary"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/primary" />
+    <item
+        android:id="@+id/izin"
+        android:icon="@drawable/izin_cuti"
+        android:title="Izin"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/primary"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/primary"  />
+    <item
+        android:id="@+id/absensi"
+        android:icon="@drawable/icon_absensi"
+        android:title="Absensi"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/primary"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/primary" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/icon_profil"
+        android:title="Profile"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/primary"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/primary" />
+
+
+
+</menu>

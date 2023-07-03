@@ -1,58 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/content"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="22dp"
-    app:cardElevation="6dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_info"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:scaleType="center"
-            android:src="@drawable/info_exam" />
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/judul_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_info"
-            android:fontFamily="@font/poppins_semi_bold"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:text="Info Judul"
-            android:textColor="@color/primary" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_info"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/info_exam" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_lihat"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/judul_info"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_btn_login"
-            android:elevation="10dp"
-            android:fontFamily="@font/poppins_semi_bold"
-            android:text="Lihat"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
-    </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/judul_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_info"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:paddingLeft="10dp"
+                android:maxLines="2"
+                android:textSize="10sp"
+                android:paddingTop="10dp"
+                android:text="Info Judul"
+                android:textColor="@color/primary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/isi_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/judul_info"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxLines="2"
+                android:textSize="8sp"
+                android:text="@string/isi_content"
+                android:textColor="#aeaeae" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_lihat"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/isi_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_btn_login"
+                android:elevation="10dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Lihat"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </RelativeLayout>
 
 
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

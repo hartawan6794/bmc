@@ -6,10 +6,20 @@ public class InfoModel implements Serializable {
 
     private String img_info;
     private String jdl_info;
+    private String isi_content;
     private String id_info;
+
 
     public String getImg_info() {
         return img_info;
+    }
+
+    public String getIsi_content() {
+        return isi_content;
+    }
+
+    public void setIsi_content(String isi_content) {
+        this.isi_content = isi_content;
     }
 
     public void setImg_info(String img_info) {

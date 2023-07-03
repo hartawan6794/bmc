@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">bmc</string>
     <string name="hadist">Janganlah sekali-kali salah seorang di antara kalian minum sambil berdiri. Apabila dia lupa maka hendaknya dia muntahkan. (HR Muslim) </string>
+    <string name="isi_content">Janganlah sekali-kali salah seorang di antara kalian minum sambil berdiri. Apabila dia lupa maka hendaknya dia muntahkan. (HR Muslim) </string>
+    <string name="info_terkini">Presiden Joko Widodo (Jokowi) angkat bicara mengenai Kelompok kriminal bersenjata (KKB) pimpinan Egianus Kogoya yang melontarkan ancaman menembak pilot Susi Air, Philip Mark Mehrtens. Jokowi memastikan Pemerintah akan terus berupaya untuk melakukan negosiasi.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
